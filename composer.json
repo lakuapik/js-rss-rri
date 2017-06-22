@@ -1,0 +1,12 @@
+{
+    "name": "davidadinugroho/rss-berita-rri",
+    "description": "rri.co.id news rss parser",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Adi Nugroho",
+            "email": "davidadi216@gmail.com"
+        }
+    ],
+    "require": {}
+}
