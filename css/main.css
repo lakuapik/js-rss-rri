@@ -1,0 +1,27 @@
+.banner h2 {
+  text-align: center;
+}
+
+.panel-title a:hover{
+  text-decoration: none;
+}
+
+.panel-title a:visited{
+  text-decoration: none;
+}
+
+.panel-title a:focus{
+  text-decoration: none;
+}
+
+.panel-group {
+  margin-bottom: 0px;
+}
+
+.panel-default > .panel-heading {
+  background-color: #fff;
+}
+
+.panel-heading {
+  border: none;
+}
