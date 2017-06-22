@@ -40,7 +40,7 @@ function showRss(category){
                   <div class="panel-body">\
                     <input type="hidden" name="idrss" value="'+i+'">\
                     <div style="text-align:center">\
-                      <img class="image-responsive img-rss" alt="IMG - '+feed.entries[i].title+'" src=""/>\
+                      <img class="img-responsive img-rss" alt="IMG - '+feed.entries[i].title+'" src=""/>\
                     </div>\
                     <p style="text-align:justify">'+feed.entries[i].description+'</p>\
                   </div>\
