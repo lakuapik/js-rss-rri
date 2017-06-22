@@ -25,3 +25,9 @@
 .panel-heading {
   border: none;
 }
+
+.img-rss {
+  max-height:500px;
+  width:auto;
+  margin-bottom:20px
+}

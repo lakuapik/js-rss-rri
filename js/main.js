@@ -2,6 +2,7 @@
 var url = 'http://rri.co.id/berita';
 var url_rss = 'rss.html';
 var categorys = ['nasional', 'luar_negeri', 'daerah', 'kilas_berita', 'ekonomi', 'olahraga', 'arus_mudik_balik', 'serba_serbi_ramadhan', 'sigap_polri', 'feature', 'hiburan', 'budaya', 'kesehatan', 'teknologi', 'sudut_istana'];
+var rss;
 
 //on document ready
 $(document).ready(function(){
@@ -25,6 +26,7 @@ function showRss(category){
     feednami
       .load(myurl)
       .then(function(feed){
+        rss = feed;
         for (var i = 0; i < feed.entries.length; i++) {
           var html='\
             <div class="panel-group">\
@@ -35,7 +37,13 @@ function showRss(category){
                   </p>\
                 </div>\
                 <div id="rss_'+i+'" class="panel-collapse collapse">\
-                  <div class="panel-body"><p style="text-align:justify">'+feed.entries[i].description+'</p></div>\
+                  <div class="panel-body">\
+                    <input type="hidden" name="idrss" value="'+i+'">\
+                    <div style="text-align:center">\
+                      <img class="image-responsive img-rss" alt="IMG - '+feed.entries[i].title+'" src=""/>\
+                    </div>\
+                    <p style="text-align:justify">'+feed.entries[i].description+'</p>\
+                  </div>\
                   <button data-toggle="collapse" href="#rss_'+i+'" class="btn btn-default" style="width:100%">Hide</button>\
                 </div>\
               </div>\
@@ -44,8 +52,12 @@ function showRss(category){
           htmlRss += html;
         }
         $('#rss').html(htmlRss);
-        $('#categorys a').removeClass('active');
-        $('#'+category).addClass('active');
+
+        //load image when panel collapse
+        $('.panel-group').on('show.bs.collapse', function(){
+          var idrss = parseInt($(this).find('input[name=idrss]').val());
+          $(this).find('img').attr('src', rss.entries[idrss].image.url)
+        });
       })
       .catch(function(error){
         console.log(error);
