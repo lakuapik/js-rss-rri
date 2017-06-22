@@ -15,17 +15,15 @@
     <![endif]-->
   </head>
   <body>
-      <div class="row">
+      <div class="container">
         <div class="banner">
           <h2>RSS Berita RRI</h2>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-          <div class="col-xs-12 col-sm-2 col-md-2">
-            <div id="categorys" class="list-group"></div>
-          </div>
-          <div id="rss" class="col-xs-12 col-sm-10 col-md-10">
-            <p class="alert-bg alert-info">please select a category</p>
-          </div>
+        <select id="category" class="form-control">
+          <option value="">--kategori berita--</option>
+        </select>
+        <div id="rss">
+          <!-- RSS Here -->
         </div>
       </div>
     </div>
