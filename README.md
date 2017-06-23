@@ -8,7 +8,13 @@ Libraries used to make this:
 * Feednami
 
 ### Live Demo
-live demo available: [http://rssrri.herokuapp.com](http://rssrri.herokuapp.com)
+live demo available: [http://rssrri.herokuapp.com](http://rssrri.herokuapp.com).  
+Ready deploy to heroku on `heroku-deploy` branch.
+
+### Screenshoot
+![alt text](https://preview.ibb.co/nguHDQ/Selection_002.png "Screenshoot 1")
+
+![alt text](https://image.ibb.co/bY8cDQ/Selection_003.png "Screenshoot 2")
 
 ### License: MIT
 Copyright 2017 David Adi Nugroho
